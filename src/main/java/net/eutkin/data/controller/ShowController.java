@@ -2,6 +2,7 @@ package net.eutkin.data.controller;
 
 import net.eutkin.data.entity.AbstractDataTS;
 import net.eutkin.data.entity.DataTS1;
+import net.eutkin.data.entity.DataTS2;
 import net.eutkin.data.service.IDataMensService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +27,7 @@ public class ShowController extends AbstractController {
             throws Exception {
         ModelAndView modelAndView = new ModelAndView("show");
         try {
-            modelAndView.addObject("dataMensList", dataMensService.showAllData());
+            modelAndView.addObject("dataMensList", dataMensService.showAllData(new DataTS1()));
         }
         catch (Exception e) {
             e.printStackTrace();
