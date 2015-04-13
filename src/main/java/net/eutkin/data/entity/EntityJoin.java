@@ -6,7 +6,6 @@ import java.sql.Time;
 
 public class EntityJoin {
     private Date date_mens;
-    private Time time_mens;
     private double power;
 
     public Date getDate_mens() {
@@ -15,14 +14,6 @@ public class EntityJoin {
 
     public void setDate_mens(Date date_mens) {
         this.date_mens = date_mens;
-    }
-
-    public Time getTime_mens() {
-        return time_mens;
-    }
-
-    public void setTime_mens(Time time_mens) {
-        this.time_mens = time_mens;
     }
 
     public double getPower() {

@@ -42,7 +42,6 @@
                     <thead>
                         <tr>
                             <th>Date</th>
-                            <th>Time</th>
                             <th>Balance of power</th>
                         </tr>
                         </thead>
@@ -60,7 +59,6 @@
             %>
                 <tr class="<%=sClass%>">
                     <td><%=entity.getDate_mens()%></td>
-                    <td><%=entity.getTime_mens()%></td>
                     <td><%=df.format(entity.getPower())%></td>
                 </tr>
             <%}%>
