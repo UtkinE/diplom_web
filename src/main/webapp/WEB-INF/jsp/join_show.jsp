@@ -1,4 +1,3 @@
-<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="net.eutkin.data.entity.EntityJoin" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.text.DecimalFormat" %>
@@ -68,10 +67,10 @@
             </main><!-- .content -->
         </div><!-- .container-->
         <aside class="left-sidebar">
-            <strong>Left Sidebar:</strong> Text
-        </aside><!-- .left-sidebar -->
+    <strong>Left Sidebar:</strong> Text
+</aside><!-- .left-sidebar -->
 
-    </div><!-- .middle-->
+</div><!-- .middle-->
 
 
 

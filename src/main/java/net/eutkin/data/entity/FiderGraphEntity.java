@@ -7,13 +7,9 @@ public class FiderGraphEntity {
 
     private Date time_line;
 
-    private Double current_fider1;
+    private Double current_fider;
 
-    private Double current_fider2;
-
-    private Double current_fider3;
-
-    private Double current_fider4;
+    private int meter_id;
 
     private int numTS;
 
@@ -25,36 +21,20 @@ public class FiderGraphEntity {
         this.time_line = time_line;
     }
 
-    public Double getCurrent_fider1() {
-        return current_fider1;
+    public Double getCurrent_fider() {
+        return current_fider;
     }
 
-    public void setCurrent_fider1(Double current_fider1) {
-        this.current_fider1 = current_fider1;
+    public void setCurrent_fider(Double current_fider) {
+        this.current_fider = current_fider;
     }
 
-    public Double getCurrent_fider2() {
-        return current_fider2;
+    public int getMeter_id() {
+        return meter_id;
     }
 
-    public void setCurrent_fider2(Double current_fider2) {
-        this.current_fider2 = current_fider2;
-    }
-
-    public Double getCurrent_fider3() {
-        return current_fider3;
-    }
-
-    public void setCurrent_fider3(Double current_fider3) {
-        this.current_fider3 = current_fider3;
-    }
-
-    public Double getCurrent_fider4() {
-        return current_fider4;
-    }
-
-    public void setCurrent_fider4(Double current_fider4) {
-        this.current_fider4 = current_fider4;
+    public void setMeter_id(int meter_id) {
+        this.meter_id = meter_id;
     }
 
     public int getNumTS() {
