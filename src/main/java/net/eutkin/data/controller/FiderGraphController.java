@@ -20,7 +20,12 @@ public class FiderGraphController {
     @Autowired
     private IDataMensService dataMensService;
 
-    private static StringBuilder createSb(List<FiderGraphEntity> entities){
+    /**
+     * Build string of data
+     * @param entities
+     * @return
+     */
+    private static StringBuilder createDataGraph(List<FiderGraphEntity> entities){
         StringBuilder sb = new StringBuilder();
         sb.append("\"Time,Fider1,Fider2,Fider3,Fider4\\n\"+\n");
         DecimalFormat df = new DecimalFormat("#.##");
@@ -40,10 +45,16 @@ public class FiderGraphController {
             i += 3;
         }
         sb.setLength(sb.length()-2);
-
-
         return sb;
     }
+
+    /**
+     * method Http POST
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping(value="/fider", method = RequestMethod.POST)
     public ModelAndView fiderPost(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView modelAndView = new ModelAndView("fider");
@@ -62,7 +73,7 @@ public class FiderGraphController {
         String[] fider12 = paramsValues.get("fider12_select");
         String[] fider34 = paramsValues.get("fider34_select");
         List<FiderGraphEntity> entities = dataMensService.showCurrentOfFiders(dataTS1,dataTS2,dateFrom,dateTill,fider12,fider34);
-        StringBuilder sb = createSb(entities);
+        StringBuilder sb = createDataGraph(entities);
         try {
             modelAndView.addObject("entities",sb);
             modelAndView.addObject("dateFrom", dateFrom);
@@ -72,7 +83,13 @@ public class FiderGraphController {
         }
     return modelAndView;
     }
-
+    /**
+     * method Get
+     * @param request
+     * @param response
+     * @return
+     * @throws Exception
+     */
     @RequestMapping(value="/fider", method = RequestMethod.GET)
     public ModelAndView fiderGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView modelAndView = new ModelAndView("fider");
